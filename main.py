@@ -1,16 +1,18 @@
-# This is a sample Python script.
+import pandas as pd
 
-# Press Mayús+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+def pdn():
+    #Crear una Serie
+    s=pd.Series([1,2,3,5,7,9], index=["a","b","c","d","e","f"])
+    print(s)
+
+    #Crear un dataframe
+    data={'Nombre':['Juan','Pau','Geraldene'],'Edad':[20,25,21],'Ciudad':['Madrid','Mexico','Guadalajara']}
+    df=pd.DataFrame(data)
+    print(df[["Nombre","Edad"]])
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    print_hi('PyCharm')
+    pdn()
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+
+
